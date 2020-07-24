@@ -129,7 +129,7 @@ public class Hypixelify extends JavaPlugin implements Listener {
                     playerData.put(player.getUniqueId(), new PlayerDatabase(player));
                 }
             }
-            Objects.requireNonNull(getCommand("party")).setExecutor(new PartyCommand());
+            Objects.requireNonNull(getCommand("pidu")).setExecutor(new PartyCommand());
         }
         Bukkit.getPluginManager().registerEvents(this, this);
         Bukkit.getPluginManager().registerEvents(new LobbyScoreboard(), this);
