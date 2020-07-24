@@ -8,7 +8,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.server.PluginEnableEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.pronze.hypixelify.commands.BWACommand;
-import org.pronze.hypixelify.commands.PartyCommand;
+import org.pronze.hypixelify.commands.PiduCommand;
 import org.pronze.hypixelify.database.PlayerDatabase;
 import org.pronze.hypixelify.inventories.GamesInventory;
 import org.pronze.hypixelify.inventories.customShop;
@@ -129,7 +129,7 @@ public class Hypixelify extends JavaPlugin implements Listener {
                     playerData.put(player.getUniqueId(), new PlayerDatabase(player));
                 }
             }
-            Objects.requireNonNull(getCommand("pidu")).setExecutor(new PartyCommand());
+            Objects.requireNonNull(getCommand("pidu")).setExecutor(new PiduCommand());
         }
         Bukkit.getPluginManager().registerEvents(this, this);
         Bukkit.getPluginManager().registerEvents(new LobbyScoreboard(), this);
