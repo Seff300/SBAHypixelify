@@ -124,7 +124,7 @@ public class ScoreBoard {
                             String you = "";
                             if (game.getTeamOfPlayer(player) != null)
                                 if (game.getTeamOfPlayer(player) == t) {
-                                    you = color("&7YOU");
+                                    you = color("&7SINA");
                                 } else {
                                     you = "";
                                 }
@@ -137,7 +137,7 @@ public class ScoreBoard {
                         }
                         continue;
                     }
-                    String date = (new SimpleDateFormat("MM/dd/yy")).format(new Date());
+                    String date = (new SimpleDateFormat("dd/MM/yy")).format(new Date());
 
                     assert chatColor != null;
                         String addline = ls
@@ -160,7 +160,7 @@ public class ScoreBoard {
                             if (game.getTeamOfPlayer(player) == null) {
                                 stf = stf.replace("{you}", "");
                             } else if (game.getTeamOfPlayer(player) == t) {
-                                stf = stf.replace("{you}", "&7YOU");
+                                stf = stf.replace("{you}", "&7SINA");
                             } else {
                                 stf = stf.replace("{you}", "");
                             }
