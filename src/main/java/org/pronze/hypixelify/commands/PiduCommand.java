@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
 
-public class PartyCommand implements TabExecutor {
+public class PiduCommand implements TabExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
         if (!(sender instanceof Player)) {
@@ -415,15 +415,15 @@ public class PartyCommand implements TabExecutor {
         Player player = (Player) commandSender;
 
         if (Hypixelify.getInstance().playerData.get(player.getUniqueId()) != null && Hypixelify.getInstance().playerData.get(player.getUniqueId()).isInvited()) {
-            return Arrays.asList("accept", "decline");
+            return Arrays.asList("noustu", "keeldu");
         }
         if (strings.length == 1) {
             if (Hypixelify.getInstance().playerData.get(player.getUniqueId()) != null && Hypixelify.getInstance().playerData.get(player.getUniqueId()).isInParty()
                     && Hypixelify.getInstance().playerData.get(player.getUniqueId()).getPartyLeader().equals(player))
-                return Arrays.asList("invite", "list", "disband", "kick", "warp");
+                return Arrays.asList("kutsu", "list", "disband", "kick", "warp");
 
 
-            return Arrays.asList("invite", "list", "help");
+            return Arrays.asList("kutsu", "list", "abi");
         }
 
         return null;
