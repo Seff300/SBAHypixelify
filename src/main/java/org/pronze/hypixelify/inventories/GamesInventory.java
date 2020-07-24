@@ -27,19 +27,19 @@ public class GamesInventory implements Listener {
 
     public GamesInventory() {
         Options option1 = ShopUtil.generateOptions();
-        option1.setPrefix("Bed Wars Solo");
+        option1.setPrefix("BedWars Soolo");
         option.put(1, option1);
         Options option2 = ShopUtil.generateOptions();
-        option2.setPrefix("Bed Wars Doubles");
+        option2.setPrefix("BedWars Duo");
         option.put(2, option2);
         Options option3 = ShopUtil.generateOptions();
-        option3.setPrefix("Bed Wars Triples");
+        option3.setPrefix("BedWars Triples");
         option.put(3, option3);
         Options option4 = ShopUtil.generateOptions();
-        option4.setPrefix("Bed Wars Squads");
+        option4.setPrefix("BedWars Squads");
         option.put(4, option4);
 
-        labels.put(1, "Solo");
+        labels.put(1, "Soolo");
         labels.put(2, "Double");
         labels.put(3, "Triple");
         labels.put(4, "Squad");
@@ -55,15 +55,15 @@ public class GamesInventory implements Listener {
         SimpleInventories squadMenu = new SimpleInventories(option.get(4));
 
         for(int i = 1; i <= 4; i++){
-            List<ItemStack> myCategories = ShopUtil.createCategories(Arrays.asList("§7Play Bed Wars {mode}".replace("{mode}", labels.get(i)), " ", "§eClick to play!"),
-                    "§aBed Wars ({mode})".replace("{mode}", labels.get(i)),"§aMap Selector ({mode})".replace("{mode}", labels.get(i)));
+            List<ItemStack> myCategories = ShopUtil.createCategories(Arrays.asList("§aMängi §9Bed§bWarsi {mode}".replace("{mode}", labels.get(i)), " ", "§7Vajutage, et §aliituda mänguga"),
+                    "§9Bed§bWars ({mode})".replace("{mode}", labels.get(i)),"§7Mappi valija ({mode})".replace("{mode}", labels.get(i)));
             ItemStack category = myCategories.get(0);
             ItemStack category2 = myCategories.get(1);
             ItemStack category3 = myCategories.get(2);
             ItemStack category4 = myCategories.get(3);
 
-            ArrayList<Object> Games = ShopUtil.createGamesGUI(i, Arrays.asList("§8{mode}".replace("{mode}", labels.get(i)), "", "§7Available Servers: §a1", "§7Status: §a{status}"
-                    ,"§7Players:§a {players}","", "§aClick to play", "§eRight click to toggle favorite!"));
+            ArrayList<Object> Games = ShopUtil.createGamesGUI(i, Arrays.asList("§8{mode}".replace("{mode}", labels.get(i)), "", "§aSaadaval §7olevad mängud: §e1", "§7Staatus: §a{status}"
+                    ,"§7Mängijaid: §e{players}","", "§7Vajutage, et §aliituda mänguga", "§eTehke parem hiire klõps, et märkida see map §alemmikuks"));
             FormatBuilder builder = ShopUtil.createBuilder(Games, category, category2, category3, category4);
             switch(i){
                 case 1:
