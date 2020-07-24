@@ -40,7 +40,7 @@ public class PartyCommand implements TabExecutor {
 
         final HashMap<UUID, PlayerDatabase> Database = Hypixelify.getInstance().playerData;
 
-        if(args[0].equalsIgnoreCase("help")){
+        if(args[0].equalsIgnoreCase("abi")){
             if(args.length != 1){
                 sender.sendMessage("Invalid amount of arguments!");
                 return true;
@@ -52,7 +52,7 @@ public class PartyCommand implements TabExecutor {
             return true;
         }
 
-        else if (args[0].equalsIgnoreCase("invite")) {
+        else if (args[0].equalsIgnoreCase("kutsu")) {
             if (args.length == 2) {
 
                 if (Database.get(player.getUniqueId()) != null) {
@@ -148,7 +148,7 @@ public class PartyCommand implements TabExecutor {
                 player.sendMessage(ShopUtil.translateColors(st));
             }
             return true;
-        } else if (args[0].equalsIgnoreCase("accept")) {
+        } else if (args[0].equalsIgnoreCase("noustu")) {
 
             if (Database.get(player.getUniqueId()) == null) {
                 player.sendMessage("§cAn error has occurred..");
@@ -173,7 +173,7 @@ public class PartyCommand implements TabExecutor {
             Hypixelify.getInstance().partyManager.addToParty(player, pParty);
             return true;
 
-        } else if (args[0].equalsIgnoreCase("leave")) {
+        } else if (args[0].equalsIgnoreCase("lahku")) {
 
             PlayerDatabase db = Hypixelify.getInstance().playerData.get(player.getUniqueId());
             if (args.length != 1) {
@@ -201,7 +201,7 @@ public class PartyCommand implements TabExecutor {
             if (party == null) return true;
 
             Hypixelify.getInstance().partyManager.removeFromParty(player, party);
-        } else if (args[0].equalsIgnoreCase("decline")) {
+        } else if (args[0].equalsIgnoreCase("keeldu")) {
 
             if (Database.get(player.getUniqueId()) == null) return true;
             if (!Database.get(player.getUniqueId()).isInvited()) {
