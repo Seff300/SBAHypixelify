@@ -10,7 +10,7 @@ commands:
   bwaddon:
     description: bwaddon
     usage: /<command>
-  party:
+  pidu:
     description: party system
     usage: /<command>
     aliases: [p]
